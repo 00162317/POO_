@@ -52,7 +52,9 @@ public class herramientasMinecraft {
         this.numFilo = numFilo;
         this.numDaño = numDaño;
     }
+    public herramientasMinecraft(){
 
+    }
     public void atacar(){
         System.out.println("TE ATACO BROOUU");
     }
