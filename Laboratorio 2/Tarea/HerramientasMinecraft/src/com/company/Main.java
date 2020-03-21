@@ -68,6 +68,7 @@ public class Main {
     }
 
     private static void Hoz() {
+
         System.out.println("-----------------------------------------");
         Scanner palabra2 = new Scanner(System.in);
         String color, tamaño, duenio;
@@ -87,7 +88,8 @@ public class Main {
         System.out.println("Daño: ");
         numDaño=palabra2.nextInt();
         hoz.setNumDaño(numDaño);
-        lista.add(new herramientasMinecraft(hoz.getColor(),hoz.getTamaño(),hoz.getDuenio(),hoz.getNumFilo(),hoz.getNumDaño()));
+
+        lista.add(hoz);
         System.out.println("-----------------------------------------");
     }
 
@@ -111,7 +113,7 @@ public class Main {
         System.out.println("Daño: ");
         numDaño=palabra2.nextInt();
         pala.setNumDaño(numDaño);
-        lista.add(new herramientasMinecraft(pala.getColor(),pala.getTamaño(),pala.getDuenio(),pala.getNumFilo(),pala.getNumDaño()));
+        lista.add(pala);
         System.out.println("-----------------------------------------");
     }
 
@@ -135,7 +137,7 @@ public class Main {
         System.out.println("Daño: ");
         numDaño=palabra2.nextInt();
         espada.setNumDaño(numDaño);
-        lista.add(new herramientasMinecraft(espada.getColor(),espada.getTamaño(),espada.getDuenio(),espada.getNumFilo(),espada.getNumDaño()));
+        lista.add(espada);
         System.out.println("-----------------------------------------");
     }
     public static void Pico(){
@@ -158,7 +160,7 @@ public class Main {
         System.out.println("Daño: ");
         numDaño=palabra2.nextInt();
         pico.setNumDaño(numDaño);
-        lista.add(new herramientasMinecraft(pico.getColor(),pico.getTamaño(),pico.getDuenio(),pico.getNumFilo(),pico.getNumDaño()));
+        lista.add(pico);
         System.out.println("-----------------------------------------");
     }
     public static void hacha(){
@@ -181,9 +183,26 @@ public class Main {
         System.out.println("Daño: ");
         numDaño=palabra2.nextInt();
         hacha.setNumDaño(numDaño);
-        lista.add(new herramientasMinecraft(hacha.getColor(),hacha.getTamaño(),hacha.getDuenio(),hacha.getNumFilo(),hacha.getNumDaño()));
+        lista.add(hacha);
         System.out.println("-----------------------------------------");
 
+    }
+    public static void mostrarHerramientas(){
+        for (int i=0; i<lista.size();i++){
+            System.out.println(""+lista.get(i));
+        }
+    }
+    public static void consultarHerramientasDeUnDuenio(){
+        String duenio;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduzca al dueño de la herramienta: ");
+        duenio = scan.nextLine();
+        System.out.println("Dueño de las herramientas: "+duenio);
+        for (int i =0; i<lista.size();i++){
+            if (lista.get(i).getDuenio().equalsIgnoreCase(duenio)){
+                System.out.println(lista.get(i));
+            }
+        }
     }
     public static void main(String[] args) {
         // write your code here
@@ -198,8 +217,10 @@ public class Main {
                         menu2();
                         break;
                     case 2:
+                        mostrarHerramientas();
                         break;
                     case 3:
+                        consultarHerramientasDeUnDuenio();
                         break;
                     case 4:
                         break;

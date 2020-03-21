@@ -55,6 +55,16 @@ public class herramientasMinecraft {
     public herramientasMinecraft(){
 
     }
+
+    @Override
+    public String toString() {
+        return "color='" + color + '\'' +
+                ", tamaño='" + tamaño + '\'' +
+                ", duenio='" + duenio + '\'' +
+                ", numFilo=" + numFilo +
+                ", numDaño=" + numDaño ;
+    }
+
     public void atacar(){
         System.out.println("TE ATACO BROOUU");
     }
