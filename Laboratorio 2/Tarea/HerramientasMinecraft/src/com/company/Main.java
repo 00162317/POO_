@@ -196,7 +196,6 @@ public class Main {
                 switch (respuesta){
                     case 1:
                         menu2();
-                        Menu();
                         break;
                     case 2:
                         break;
