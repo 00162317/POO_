@@ -230,8 +230,7 @@ public class Main {
             System.out.println(hola);
         }
     }
-    public static void main(String[] args) {
-        // write your code here
+    public static void llamadas(){
         Scanner palabra = new Scanner(System.in);
         boolean salir = false;
         while (!salir){
@@ -265,5 +264,9 @@ public class Main {
                 e.printStackTrace();
             }
         }
+    }
+    public static void main(String[] args) {
+        // write your code here
+        llamadas();
     }
 }
