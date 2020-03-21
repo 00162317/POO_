@@ -204,6 +204,32 @@ public class Main {
             }
         }
     }
+    public static void atacarForEach(){
+        ArrayList<String> atacarLista = new ArrayList<>();
+
+        atacarLista.add(hacha.atacar());
+        atacarLista.add(pala.atacar());
+        atacarLista.add(hoz.atacar());
+        atacarLista.add(espada.atacar());
+        atacarLista.add(pico.atacar());
+
+        for(String hola : atacarLista){
+            System.out.println(hola);
+        }
+    }
+    public static void defenderForEach(){
+        ArrayList<String> defenderLista = new ArrayList<>();
+
+        defenderLista.add(hacha.defiendo());
+        defenderLista.add(pala.defiendo());
+        defenderLista.add(hoz.defiendo());
+        defenderLista.add(espada.defiendo());
+        defenderLista.add(pico.defiendo());
+
+        for(String hola : defenderLista){
+            System.out.println(hola);
+        }
+    }
     public static void main(String[] args) {
         // write your code here
         Scanner palabra = new Scanner(System.in);
@@ -223,8 +249,10 @@ public class Main {
                         consultarHerramientasDeUnDuenio();
                         break;
                     case 4:
+                        atacarForEach();
                         break;
                     case 5:
+                        defenderForEach();
                         break;
                     case 6:
                         salir=true;

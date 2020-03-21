@@ -65,11 +65,11 @@ public class herramientasMinecraft {
                 ", numDaño=" + numDaño ;
     }
 
-    public void atacar(){
-        System.out.println("TE ATACO BROOUU");
+    public String atacar(){
+        return "TE ATACO BROOUU";
     }
 
-    public void defiendo(){
-        System.out.println("ME DEFIENDO BROU");
+    public String defiendo(){
+        return "ME DEFIENDO BROU";
     }
 }
